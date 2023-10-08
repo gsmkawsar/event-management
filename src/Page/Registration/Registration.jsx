@@ -1,18 +1,48 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Hook/AuthProvider";
+import toast from "react-hot-toast";
+
 
 const Registration = () => {
 
-    const handelRegister = e => {
+    const { createUser, googleSingIn } = useContext(AuthContext)
 
+    const handelRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
         const email = form.get('email');
         const password = form.get('password');
 
-        console.log(form, name, email, password)
+        if (password.length < 6) {
+            toast.error('Please most be at 6 characters');
+            return
+        } else if (!/([A-Z])/.test(password)) {
+            toast.error('Your password should have at lest one upper case characters')
+            return;
+        }
+
+
+        //   Create User
+
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                toast.success('Success Register')
+            })
+            .catch(error => toast.error(error.message))
 
     }
+    const googleLogin = () => {
+        googleSingIn()
+            .then(result => {
+                console.log(result.user);
+                toast.success('Success Register')
+            })
+            .catch(error => toast.error(error.message))
+    }
+
 
     return (
         <div>
@@ -44,11 +74,14 @@ const Registration = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Register</button>
+                            <button className="btn btn-neutral">Register</button>
                         </div>
-                        <p>Already have an account please <Link className="text-blue-600 font-bold" to={"/login"}>Login</Link></p>
+                        <p>Already have an account please <Link className="text-red-600 font-bold" to={"/login"}>Login</Link></p>
                     </form>
-
+                    <div className="mb-5 text-center">
+                        <p className="font-bold">Continue with</p>
+                        <button onClick={googleLogin} className="btn btn-neutral mt-4 w-40 ">Google Register </button>
+                    </div>
                 </div>
             </div>
         </div>

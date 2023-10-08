@@ -1,7 +1,21 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Hook/AuthProvider";
+import { AiOutlineLogin, AiOutlineLogout } from 'react-icons/ai';
+import toast from "react-hot-toast";
 
 
 const Header = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSingOut = () =>{
+        logOut()
+        .then()
+        .catch()
+        toast.success('Success Logout')
+
+    }
 
     const navLink = <>
         <li> <NavLink to={"/"}>Home</NavLink> </li>
@@ -25,18 +39,22 @@ const Header = () => {
                         {navLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a className=" text-red-600 text-xl font-bold">Team Building</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-
+            <div className="navbar-start hidden lg:flex">
+                <ul className="menu menu-horizontal ">
                     {navLink}
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to={'/login'}>
-                <a className="btn">Login</a>
-                </Link>
+                {user ?
+                    <button onClick={handleSingOut} className="btn btn-neutral rounded-full"><AiOutlineLogout/> Sing Out</button>
+                    :
+                    <Link to={'/login'}>
+                        <button className="btn btn-neutral rounded-full"><AiOutlineLogin/> Login</button>
+                    </Link>
+                }
+
 
             </div>
         </div>
