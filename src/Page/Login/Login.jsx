@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Hook/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 
 const Login = () => {
-    const { googleSingIn, singIn, user } = useContext(AuthContext);
+    const { googleSingIn, singIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
 
 
@@ -28,7 +30,8 @@ const Login = () => {
         singIn(email, password)
             .then(result => {
                 console.log(result.user);
-                toast.success('Success Login')
+                toast.success('Success Login');
+                navigate(location?.state ? location?.state : '/' )
             })
             .catch(error => toast.error(error.message))
 
@@ -39,7 +42,9 @@ const Login = () => {
         googleSingIn()
             .then(result => {
                 console.log(result.user);
-                toast.success('Success Login')
+                toast.success('Success Login');
+                navigate(location?.state ? location?.state : '/' )
+
             })
             .catch(error => toast.error(error.message))
 

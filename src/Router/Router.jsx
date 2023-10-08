@@ -5,7 +5,10 @@ import ErrorPage from "../Page/ErrorPage/ErrorPage";
 import Login from "../Page/Login/Login";
 import Registration from "../Page/Registration/Registration";
 import PrivateRoute from "./PrivateRoute";
-import Descriptions from "../components/Home/Description/Descriptions";
+import DescriptionAll from "../components/Home/DescriptionAll/DescriptionAll";
+
+
+
 
 
 const router = createBrowserRouter([
@@ -20,6 +23,11 @@ const router = createBrowserRouter([
                 loader: ()=> fetch('/data.json')
             },
             {
+                path: "/descriptions/:id",
+                element: <PrivateRoute> <DescriptionAll></DescriptionAll> </PrivateRoute>,
+                loader: ()=> fetch('/data.json')
+            },
+            {
                 path: "/login",
                 element: <Login></Login>,
             },
@@ -31,11 +39,7 @@ const router = createBrowserRouter([
                 path: "/contact",
                 element: <PrivateRoute><Registration></Registration></PrivateRoute>,
             },
-            {
-                path: "/description:id",
-                element: <PrivateRoute><Descriptions/></PrivateRoute>,
-                loader: ()=> fetch('/data.json')
-            },
+      
         ]
     },
 

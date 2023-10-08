@@ -9,7 +9,6 @@ const Home = () => {
   
     return (
         <div>
-            <h1>This Is home</h1>
             <ItemCards itemCards={itemCards}></ItemCards>
         </div>
     );
