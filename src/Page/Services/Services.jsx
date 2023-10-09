@@ -32,7 +32,7 @@ const Services = () => {
                     <p>Big group party</p>
                 </div>
                 <div className="card-body text-center">
-                    <h2 className="text-7xl font-bold text-lime-500">1,249</h2>
+                    <h2 className="text-7xl font-bold text-lime-500">$1,249</h2>
                     <p className="font-bold mb-4">/event</p>
                     <p>Recommended for 20-30 Participant</p>
                     <hr />
@@ -54,7 +54,7 @@ const Services = () => {
                     <p>Luxury & Big group party</p>
                 </div>
                 <div className="card-body text-center">
-                    <h2 className="text-7xl font-bold text-red-500">2,099</h2>
+                    <h2 className="text-7xl font-bold text-red-500">$2,099</h2>
                     <p className="font-bold mb-4">/event</p>
                     <p>Recommended for 30-50 Participant</p>
                     <hr />

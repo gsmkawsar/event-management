@@ -9,22 +9,21 @@ const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
-console.log(user)
+    console.log(user)
 
-    const handleSingOut = () =>{
+    const handleSingOut = () => {
         logOut()
-        .then()
-        .catch()
+            .then()
+            .catch()
         toast.success('Success Logout')
 
     }
 
     const navLink = <>
         <li> <NavLink to={"/"}>Home</NavLink> </li>
-        <li> <NavLink to={"/about"}>About</NavLink> </li>
         <li> <NavLink to={"/contact"}>Contact</NavLink> </li>
         <li> <NavLink to={"/services"}>Services</NavLink> </li>
-    
+
 
     </>
 
@@ -52,18 +51,37 @@ console.log(user)
             </div>
 
             <div className="navbar-end">
-            <div className="flex mr-3">
-                <img className="w-8 rounded-full " src={user?.photoURL} alt="" />
-                <p>{user?.displayName}</p>
+                <div className=" lg:flex mr-3 hidden justify-center  ">
+                    <img className="w-8 rounded-full mr-2 " src={user?.photoURL} alt="" />
+                    <p>{user?.displayName}</p>
                 </div>
 
                 {user ?
-                    <button onClick={handleSingOut} className="btn btn-neutral bg-red-600 text-white rounded-full">  <AiOutlineLogout/> Sing Out</button>
+
+                    <button onClick={handleSingOut} className="btn btn-neutral bg-red-600 text-white rounded-full">  <AiOutlineLogout /> Sing Out</button>
+
                     :
                     <Link to={'/login'}>
-                        <button className="btn btn-neutral bg-red-600  text-white rounded-full"><AiOutlineLogin/> Login</button>
+                        <button className="btn btn-neutral bg-red-600  text-white rounded-full"><AiOutlineLogin /> Login</button>
                     </Link>
                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             </div>
