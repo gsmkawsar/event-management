@@ -6,6 +6,9 @@ import Login from "../Page/Login/Login";
 import Registration from "../Page/Registration/Registration";
 import PrivateRoute from "./PrivateRoute";
 import DescriptionAll from "../components/Home/DescriptionAll/DescriptionAll";
+import Services from "../Page/Services/Services";
+import About from "../Page/about/About";
+import Contact from "../Page/contact/Contact";
 
 
 
@@ -36,8 +39,16 @@ const router = createBrowserRouter([
                 element: <Registration></Registration>,
             },
             {
+                path: "/about",
+                element: <About></About>,
+            },
+            {
                 path: "/contact",
-                element: <PrivateRoute><Registration></Registration></PrivateRoute>,
+                element: <Contact></Contact>,
+            },
+            {
+                path: "/services",
+                element: <PrivateRoute><Services/></PrivateRoute>,
             },
       
         ]

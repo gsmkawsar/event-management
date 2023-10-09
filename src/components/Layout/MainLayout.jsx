@@ -6,10 +6,15 @@ import { Toaster } from "react-hot-toast";
 const MainLayout = () => {
     return (
         <div className="w-10/12 m-auto">
-            <Header></Header>
+            <div className='mb-10'>
+                <Header></Header>
+            </div>
             <Outlet></Outlet>
-            <Footer></Footer>
-            <Toaster/>
+            <div className='mt-10'>
+                <Footer></Footer>
+            </div>
+
+            <Toaster />
         </div>
     );
 };

@@ -4,6 +4,7 @@ import { AuthContext } from "../../Hook/AuthProvider";
 import toast from "react-hot-toast";
 
 
+
 const Registration = () => {
 
     const { createUser, googleSingIn } = useContext(AuthContext)
@@ -74,13 +75,13 @@ const Registration = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-neutral">Register</button>
+                            <button className="btn btn-neutral bg-red-500">Register</button>
                         </div>
                         <p>Already have an account please <Link className="text-red-600 font-bold" to={"/login"}>Login</Link></p>
                     </form>
                     <div className="mb-5 text-center">
                         <p className="font-bold">Continue with</p>
-                        <button onClick={googleLogin} className="btn btn-neutral mt-4 w-40 ">Google Register </button>
+                        <button onClick={googleLogin} className="btn btn-neutral bg-red-500 mt-4 w-40 "> Google Register </button>
                     </div>
                 </div>
             </div>

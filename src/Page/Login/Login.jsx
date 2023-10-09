@@ -78,13 +78,13 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button type="submit" className="btn btn-neutral">Login</button>
+                        <button type="submit" className="btn btn-neutral bg-red-500">Login</button>
                     </div>
                     <p>Do not have an account <Link className="text-red-600 font-bold" to={"/register"}>Register</Link></p>
                 </form>
                 <div className="mb-5 text-center">
                     <p className="font-bold">Continue with</p>
-                    <button onClick={handelGoogleSingIn} className="btn btn-neutral mt-4 w-40 ">Google Login</button>
+                    <button onClick={handelGoogleSingIn} className="btn btn-neutral bg-red-500 mt-4 w-40 ">Google Login</button>
                 </div>
 
 

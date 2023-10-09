@@ -1,50 +1,50 @@
 [
     {
       "id": 1,
-      "name": "Film Screening - Action Movie Night",
-      "image": "https://i.ibb.co/HtPSQRc/Weddings.jpg",
+      "name": "Indoor Party",
+      "image": "https://i.ibb.co/1qb9vTm/Indoor-Party.jpg",
       "price": 10.99,
-      "short_description": "Enjoy an action-packed movie night with thrilling films.",
+      "short_description": "Join us for an unforgettable indoor birthday celebration that promises to be a day filled with laughter, joy, and cherished memories! We're transforming our cozy indoor space into a party haven to ensure a fantastic time, rain or shine..",
       "button_text": "Book Now"
     },
     {
       "id": 2,
-      "name": "Premiere - Romantic Film Night",
-      "image": "https://i.ibb.co/HtPSQRc/Weddings.jpg",
+      "name": "Outdoor Party",
+      "image": "https://i.ibb.co/YyWHQV2/Outdoor-Party.jpg",
       "price": 12.99,
-      "short_description": "Experience a romantic evening with the latest premieres.",
+      "short_description": "Get ready for an exhilarating outdoor birthday celebration that promises fun, adventure, and unforgettable moments! Join us in the great outdoors as we celebrate [Name]'s special day surrounded by nature's beauty..",
       "button_text": "Get Tickets"
     },
     {
       "id": 3,
-      "name": "Film Screening - Sci-Fi Extravaganza",
-      "image": "https://i.ibb.co/HtPSQRc/Weddings.jpg",
+      "name": "Birthday Party",
+      "image": "https://i.ibb.co/TvQj1rF/Birthday-Party.jpg",
       "price": 9.99,
-      "short_description": "Dive into the future with mind-bending sci-fi films.",
+      "short_description": "It's time to celebrate another fantastic year of life! Join us for a memorable birthday party in honor of [Name]. Get ready for an incredible day filled with fun, laughter, and delightful surprises.",
       "button_text": "Book Now"
     },
     {
       "id": 4,
-      "name": "Premiere - Horror Fright Fest",
-      "image": "https://i.ibb.co/HtPSQRc/Weddings.jpg",
+      "name": "Theme Party",
+      "image": "https://i.ibb.co/RH1k07k/Theme-Party.jpg",
       "price": 11.99,
-      "short_description": "Experience spine-chilling horror premieres that will haunt your dreams.",
+      "short_description": "Step into a magical world of wonder and whimsy at our Enchanted Garden Theme Party! Join us for an enchanting evening under the stars, surrounded by the beauty of nature and the allure of a mystical garden.",
       "button_text": "Get Tickets"
     },
     {
       "id": 5,
-      "name": "Film Screening - Classic Cinema Night",
-      "image": "https://i.ibb.co/HtPSQRc/Weddings.jpg",
+      "name": "Family Party",
+      "image": "https://i.ibb.co/n37YbsX/Family-Party.jpg",
       "price": 8.99,
-      "short_description": "Relive the golden age of cinema with timeless classics.",
+      "short_description": "Get ready for a heartwarming gathering as we come together to celebrate the bonds of family and the joy of being together. Join us for a Family Fiesta, an event filled with love, laughter, and cherished moments.",
       "button_text": "Book Now"
     },
     {
       "id": 6,
-      "name": "Premiere - Family Movie Matinee",
-      "image": "https://i.ibb.co/HtPSQRc/Weddings.jpg",
+      "name": "Event Party",
+      "image": "https://i.ibb.co/w70prqq/Event-Party.jpg",
       "price": 7.99,
-      "short_description": "Enjoy a fun-filled family afternoon with the latest premieres for all ages.",
+      "short_description": "Prepare to be blown away by the ultimate Event Extravaganza! Join us for a night of glamour, excitement, and unforgettable moments at this spectacular event",
       "button_text": "Get Tickets"
     }
   ]
