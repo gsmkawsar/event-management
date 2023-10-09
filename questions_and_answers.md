@@ -18,10 +18,10 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: undefined.
 
-<i>A: {}</i>
-<i>Due to JavaScript's behavior, when you assign a value to an undeclared variable, it creates a global variable implicitly. So, in your code, greetign is treated as a global variable, and an empty object {} is assigned to it.</i>
+
+<i>Because of the typo, greetign is a different variable from greeting, and JavaScript treats it as a new and separate variable. Since you haven't assigned any value to the greeting variable, it remains undefined by default. However, you have assigned an empty object to the greetign variable, so when you log greetign, you'll see the empty object being printed to the console.</i>
 
 </p>
 </details>
@@ -44,9 +44,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: "12".
 
-<i>C: "12"</i>
+
 <i>The answer is indeed "12" because JavaScript performs type coercion in this case. When you use the + operator with a number and a string, JavaScript converts the number to a string and then concatenates the two strings together.</i>
 
 </p>
@@ -71,9 +71,8 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: ['🍕', '🍫', '🥑', '🍔'] .
 
-<i>A: ['🍕', '🍫', '🥑', '🍔']</i>
 <i>You create an array food with four elements: ["🍕", "🍫", "🥑", "🍔"].
 
 You create an object info with a property favoriteFood, which is initially assigned the value "🍕". This value is a reference to the first element of the food array.
@@ -103,9 +102,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: Hi there, undefined .
 
-<i>B: Hi there, undefined</i>
+
 <i>In JavaScript, when you define a function with parameters, such as function sayHi(name), those parameters act as placeholders for values that you can provide when you call the function.</i>
 
 </p>
@@ -132,9 +131,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: 3.
 
-<i>C: 3</i>
+
 <i>because the code is using the forEach method to iterate through the nums array and count the number of truthy values. In JavaScript, a value is considered truthy</i>
 
 </p>
